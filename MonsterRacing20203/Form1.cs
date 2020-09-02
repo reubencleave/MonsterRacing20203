@@ -145,9 +145,9 @@ private void RunRace()
                 }
 
                 PunterNumber = Factory.SetPunterNumber(CurrentPunter.PunterName);
-                string Testtt = MyPunter[PunterNumber].PunterName;
+                string Number = MyPunter[PunterNumber].PunterName;
 
-                MessageBox.Show(Testtt);
+                MessageBox.Show(Number);
             }
         }
 
