@@ -1,4 +1,5 @@
 ﻿using MonsterRacing20203.Properties;
+using MonsterRacing2023;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,11 @@ namespace MonsterRacing20203
 				
 		Monster[] monster = new Monster[4]; //creates my monsters in an array
 				Punter[] MyPunter = new Punter[3];//all my punters in an array
+        Punter CurrentPunter = new George(); //default CurrentPunter
+        public int PunterNumber { get; set; }
 
 
-		// Punter CurrentPunter = new Sophie(); // used in the code for a default punter
+        // Punter CurrentPunter = new Sophie(); // used in the code for a default punter
 
 
         public object Charlotte { get; private set; }
@@ -103,6 +106,18 @@ private void RunRace()
                 }
             }
         }
+
+		private void Bet(string Bet)
+        {
+			for (int i = 0; i < 3; i++)
+            {
+				if (MyPunter[i].Monstername == MonsterWinner)
+                {
+					MyPunter[i].Cash += MyPunter[i].Bet;
+
+                }
+            }
+        }
       
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -113,6 +128,27 @@ private void RunRace()
         {
 			RadioButton fakeRB = new RadioButton();
 			fakeRB = (RadioButton)sender;
+
+            if (fakeRB.Checked)
+            {
+                switch (fakeRB.Text)
+                {
+                    case "George":
+                        CurrentPunter = new George();
+                        break;
+                    case "Sophie":
+                        CurrentPunter = new Sophie ();
+                        break;
+                    case "Peter":
+                        CurrentPunter = new Peter();
+                        break;
+                }
+
+                PunterNumber = Factory.SetPunterNumber(CurrentPunter.PunterName);
+                string Testtt = MyPunter[PunterNumber].PunterName;
+
+                MessageBox.Show(Testtt);
+            }
         }
 
         private void btnBets_Click(object sender, EventArgs e)

@@ -36,9 +36,9 @@
             this.btnBets = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.UDB = new System.Windows.Forms.NumericUpDown();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rbGeorge = new System.Windows.Forms.RadioButton();
+            this.rbSophie = new System.Windows.Forms.RadioButton();
+            this.rbPeter = new System.Windows.Forms.RadioButton();
             this.lblWinner = new System.Windows.Forms.Label();
             this.lblSam = new System.Windows.Forms.Label();
             this.lblJohn = new System.Windows.Forms.Label();
@@ -123,38 +123,41 @@
             this.UDB.Size = new System.Drawing.Size(120, 22);
             this.UDB.TabIndex = 8;
             // 
-            // radioButton1
+            // rbGeorge
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(594, 576);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(60, 21);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "John";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbGeorge.AutoSize = true;
+            this.rbGeorge.Location = new System.Drawing.Point(594, 576);
+            this.rbGeorge.Name = "rbGeorge";
+            this.rbGeorge.Size = new System.Drawing.Size(96, 26);
+            this.rbGeorge.TabIndex = 9;
+            this.rbGeorge.TabStop = true;
+            this.rbGeorge.Text = "George";
+            this.rbGeorge.UseVisualStyleBackColor = true;
+            this.rbGeorge.CheckedChanged += new System.EventHandler(this.AllRB_CheckedChanged);
             // 
-            // radioButton3
+            // rbSophie
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(594, 614);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(67, 21);
-            this.radioButton3.TabIndex = 11;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Sarah";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbSophie.AutoSize = true;
+            this.rbSophie.Location = new System.Drawing.Point(594, 614);
+            this.rbSophie.Name = "rbSophie";
+            this.rbSophie.Size = new System.Drawing.Size(91, 26);
+            this.rbSophie.TabIndex = 11;
+            this.rbSophie.TabStop = true;
+            this.rbSophie.Text = "Sophie";
+            this.rbSophie.UseVisualStyleBackColor = true;
+            this.rbSophie.CheckedChanged += new System.EventHandler(this.AllRB_CheckedChanged);
             // 
-            // radioButton4
+            // rbPeter
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(594, 652);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(57, 21);
-            this.radioButton4.TabIndex = 12;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Sam";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbPeter.AutoSize = true;
+            this.rbPeter.Location = new System.Drawing.Point(594, 652);
+            this.rbPeter.Name = "rbPeter";
+            this.rbPeter.Size = new System.Drawing.Size(79, 26);
+            this.rbPeter.TabIndex = 12;
+            this.rbPeter.TabStop = true;
+            this.rbPeter.Text = "Peter";
+            this.rbPeter.UseVisualStyleBackColor = true;
+            this.rbPeter.CheckedChanged += new System.EventHandler(this.AllRB_CheckedChanged);
             // 
             // lblWinner
             // 
@@ -200,9 +203,9 @@
             this.Controls.Add(this.lblJohn);
             this.Controls.Add(this.lblSam);
             this.Controls.Add(this.lblWinner);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbPeter);
+            this.Controls.Add(this.rbSophie);
+            this.Controls.Add(this.rbGeorge);
             this.Controls.Add(this.UDB);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnBets);
@@ -234,9 +237,9 @@
         private System.Windows.Forms.Button btnBets;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.NumericUpDown UDB;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbGeorge;
+        private System.Windows.Forms.RadioButton rbSophie;
+        private System.Windows.Forms.RadioButton rbPeter;
         private System.Windows.Forms.Label lblWinner;
         private System.Windows.Forms.Label lblSam;
         private System.Windows.Forms.Label lblJohn;
